@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/gorjeta" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editValor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -45,42 +45,46 @@
         android:text="R$ 0.00"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toEndOf="@+id/textGorjeta"
+        app:layout_constraintTop_toBottomOf="@+id/textPorcentagem" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:padding="5dp"
-        android:text="TextView"
+        android:text="Total"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textGorjeta"
         tools:text="Total" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textGorjeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:padding="5dp"
-        android:text="TextView"
+        android:text="Gorjeta"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="363dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPorcentagem"
         tools:text="Gorjeta" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textPorcentagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:padding="5dp"
-        android:text="TextView"
+        android:text="0%"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="318dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editValor"
         tools:text="0%" />
 
     <TextView
@@ -95,17 +99,18 @@
         android:text="R$ 0.00"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/textTotal"
+        app:layout_constraintTop_toBottomOf="@+id/textGorjeta" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBarGorjeta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
+        android:max="100"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toEndOf="@+id/textPorcentagem"
+        app:layout_constraintTop_toBottomOf="@+id/editValor" />
 </androidx.constraintlayout.widget.ConstraintLayout>
